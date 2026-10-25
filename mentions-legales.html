@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Aïkido Club Bracilien</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .legal { padding: 4rem 0 5rem; max-width: 760px; }
+    .legal h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 .5rem; }
+    .legal h2 { font-size: 1.4rem; margin: 2.2rem 0 .6rem; }
+    .legal p, .legal li { color: var(--muted); }
+    .legal strong { color: var(--ink); }
+    .legal .updated { font-size: .9rem; }
+    .back-link { font-weight: 600; }
+    .site-footer a { color: #f2c9c5; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="" width="36" height="36">
+        <span>Aïkido <small>Club Bracilien</small></span>
+      </a>
+      <a href="index.html" class="back-link">← Retour au site</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container legal">
+      <h1>Mentions légales</h1>
+      <p class="updated">Dernière mise à jour : 24 octobre 2026</p>
+
+      <h2>Éditeur du site</h2>
+      <p>
+        <strong>Aïkido Club Bracilien</strong>, association déclarée régie par la loi du 1er juillet 1901.<br>
+        Téléphone : 06.64.73.94.73<br>
+        Email : aikidobracieux@hotmail.fr
+      </p>
+
+      <h2>Directeur de la publication</h2>
+      <p>Didier Moreau, président de l'association.</p>
+
+      <h2>Hébergement</h2>
+      <p>
+        Le site est hébergé par <strong>GitHub, Inc.</strong> (service GitHub Pages),<br>
+        88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+        Site web : <a href="https://pages.github.com/" target="_blank" rel="noopener">pages.github.com</a>
+      </p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>Les textes, images, logos et autres éléments de ce site sont la propriété de l'Aïkido Club Bracilien, sauf mention contraire. Toute reproduction ou diffusion sans autorisation préalable est interdite.</p>
+
+      <h2>Responsabilité</h2>
+      <p>Les informations publiées (horaires, lieu, contacts) sont données à titre indicatif et peuvent évoluer. Nous vous invitons à contacter le club pour les confirmer. L'association ne saurait être tenue responsable d'éventuelles erreurs ou omissions, ni du contenu des sites externes vers lesquels ce site renvoie.</p>
+
+      <h2>Données personnelles et cookies</h2>
+      <p>Ce site ne comporte ni formulaire, ni compte utilisateur, ni outil de mesure d'audience, et ne dépose aucun cookie de sa propre initiative. Aucune donnée personnelle n'est collectée directement par l'association via ce site.</p>
+      <p>La carte de la section « Où nous trouver » est fournie par Google Maps. Son affichage peut entraîner la transmission de données techniques (par exemple l'adresse IP) à Google, selon la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>. L'hébergeur GitHub peut également enregistrer des données techniques de connexion.</p>
+      <p>Si vous contactez le club par téléphone, par mail ou via Facebook, vos informations ne sont utilisées que pour répondre à votre demande. Pour toute question ou pour exercer vos droits (accès, rectification, suppression), vous pouvez écrire à l'adresse indiquée ci-dessus.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Aïkido Club Bracilien · Bracieux (41250) · <a href="index.html">Accueil</a></p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
