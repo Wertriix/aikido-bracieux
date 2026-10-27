@@ -33,6 +33,15 @@ var EVENEMENTS = [
      description: "Courte description de l'événement."
     },
 
+   {
+     date: '2026-10-28',
+     heure: '10h00 – 12h00',
+     lieu: 'Gymnase, Place Lucien Jardel',
+     type: 'Portes ouvertes',
+     titre: "Titre de l'événement_TEST",
+     description: "Courte description de l'événement."
+    },
+
 ];
 
 
