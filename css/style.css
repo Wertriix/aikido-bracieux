@@ -135,6 +135,11 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.2; font-weight: 700; }
 .address-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; display: grid; gap: 1rem; align-content: center; justify-items: start; }
 .address-card h3 { margin: 0; font-size: 1.5rem; }
 .address-card address { font-style: normal; font-size: 1.1rem; line-height: 1.8; }
+.address-actions { display: flex; align-items: center; flex-wrap: nowrap; gap: .9rem; width: 100%; }
+.address-actions .btn { flex: 0 0 auto; }
+.address-actions img { flex: 0 1 200px; min-width: 0; width: 200px; height: 135px; object-fit: cover; border-radius: 14px; box-shadow: 0 8px 18px rgba(60, 40, 20, .2); }
+.address-card { gap: .6rem; }
+.address-card address { line-height: 1.6; }
 
 /* Contact : encadrés cliquables */
 .contact-boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
