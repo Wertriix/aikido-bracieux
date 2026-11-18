@@ -196,3 +196,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.2; font-weight: 700; }
   .hero-media::before { transform: translate(10px, 10px); }
   .hero-media-2::before { transform: translate(-10px, 10px); }
 }
+
+/* Photo d'événement agrandie au clic */
+.agenda-img { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 1.5rem; background: rgba(20, 15, 10, .88); cursor: zoom-out; }
+.lightbox img { width: auto; height: auto; max-width: min(1100px, 100%); max-height: calc(100vh - 3rem); object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, .5); }
+.lightbox-close { position: absolute; top: 1rem; right: 1rem; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: var(--ink); font: 400 1.8rem/1 var(--sans); cursor: pointer; }
