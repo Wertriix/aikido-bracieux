@@ -14,6 +14,7 @@
      type        facultatif                               ex. 'Stage', 'Portes ouvertes'
      titre       obligatoire
      description facultatif
+     image       facultatif, photo dans le dossier img/       ex. 'img/stage.jpg'
 
    Les événements passés disparaissent tout seuls. S'il n'y a plus rien à
    afficher, le message « Aucun événement annoncé » réapparaît.
@@ -24,14 +25,14 @@ var EVENEMENTS = [
   /* EXEMPLE : pour l'activer, enlève les « // » au début de chaque ligne,
      puis remplace les textes. Pense à garder la virgule après l'accolade fermante. */
 
-   {
-     date: '2026-12-05',
+  {
+    date: '2026-12-05',
      heure: '15h00 – 16h30',
      lieu: 'Dojo - Gymnase, Place Lucien Jardel',
      type: 'Stage de Noël INTERCLUBS',
      titre: "STAGE ENFANTS",
-     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF)."
-     image: 'img/event noel aikido.jpg'
+     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF).",
+     image: 'img/event-noel-aikido.jpg'
     },
 
   {
@@ -40,8 +41,8 @@ var EVENEMENTS = [
     lieu: 'Dojo - Gymnase, Place Lucien Jardel',
     type: 'Stage de Noël INTERCLUBS',
     titre: "STAGE ADULTES",
-    description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF)."
-    image: 'img/event noel aikido.jpg'
+    description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF).",
+    image: 'img/event-noel-aikido.jpg'
   },
 
 ];
