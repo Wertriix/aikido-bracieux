@@ -157,6 +157,14 @@ var EVENEMENTS = [
 
     if (e.description) body.appendChild(el('p', 'agenda-desc', e.description));
 
+    if (e.lien && /^https:\/\//i.test(e.lien)) {
+      var lien = el('a', 'btn btn-small btn-ghost agenda-link', e.lienTexte || 'Voir la publication ↗');
+      lien.href = e.lien;
+      lien.target = '_blank';
+      lien.rel = 'noopener noreferrer';
+      body.appendChild(lien);
+    }
+
         item.appendChild(body);
 
     if (e.image) {
