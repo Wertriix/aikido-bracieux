@@ -31,7 +31,7 @@ var EVENEMENTS = [
      lieu: 'Dojo - Gymnase, Place Lucien Jardel',
      type: 'Stage de Noël INTERCLUBS',
      titre: "STAGE ENFANTS",
-     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF). Plus d'info sur https://www.facebook.com/people/A%C3%AFkido-Bracieux/61579966506512/",
+     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF).",
      image: 'img/event-noel-aikido.jpg'
     },
 
@@ -41,7 +41,7 @@ var EVENEMENTS = [
     lieu: 'Dojo - Gymnase, Place Lucien Jardel',
     type: 'Stage de Noël INTERCLUBS',
     titre: "STAGE ADULTES",
-    description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF). Plus d'info sur https://www.facebook.com/people/A%C3%AFkido-Bracieux/61579966506512/",
+    description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF).",
     image: 'img/event-noel-aikido.jpg'
   },
 
@@ -98,6 +98,32 @@ var EVENEMENTS = [
     return li;
   }
 
+  // Agrandit une photo au clic (se ferme par clic, croix ou touche Échap)
+  function agrandir(src, alt) {
+    var fond = el('div', 'lightbox');
+    fond.setAttribute('role', 'dialog');
+    fond.setAttribute('aria-modal', 'true');
+    var grand = document.createElement('img');
+    grand.src = src;
+    grand.alt = alt;
+    var fermer = el('button', 'lightbox-close', '×');
+    fermer.type = 'button';
+    fermer.setAttribute('aria-label', 'Fermer');
+    function onKey(ev) { if (ev.key === 'Escape') fermerFond(); }
+    function fermerFond() {
+      document.removeEventListener('keydown', onKey);
+      if (fond.parentNode) fond.parentNode.removeChild(fond);
+      document.body.style.overflow = '';
+    }
+    fond.addEventListener('click', fermerFond);
+    document.addEventListener('keydown', onKey);
+    fond.appendChild(grand);
+    fond.appendChild(fermer);
+    document.body.appendChild(fond);
+    document.body.style.overflow = 'hidden';
+    fermer.focus();
+  }
+
   function card(x, isNext) {
     var e = x.e;
     var multi = x.end > x.start;
@@ -138,6 +164,12 @@ var EVENEMENTS = [
       img.alt = e.titre || "Illustration de l'événement";
       img.loading = 'lazy';
       img.onerror = function () { if (img.parentNode) img.parentNode.removeChild(img); };
+      img.title = 'Cliquer pour agrandir';
+      img.tabIndex = 0;
+      img.addEventListener('click', function () { agrandir(img.src, img.alt); });
+      img.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); agrandir(img.src, img.alt); }
+      });
       item.appendChild(img);
     }
     return item;
