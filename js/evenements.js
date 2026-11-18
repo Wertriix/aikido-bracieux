@@ -31,7 +31,7 @@ var EVENEMENTS = [
      lieu: 'Dojo - Gymnase, Place Lucien Jardel',
      type: 'Stage de Noël INTERCLUBS',
      titre: "STAGE ENFANTS",
-     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF).",
+     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF). Plus d'info sur https://www.facebook.com/people/A%C3%AFkido-Bracieux/61579966506512/",
      image: 'img/event-noel-aikido.jpg'
     },
 
@@ -41,7 +41,7 @@ var EVENEMENTS = [
     lieu: 'Dojo - Gymnase, Place Lucien Jardel',
     type: 'Stage de Noël INTERCLUBS',
     titre: "STAGE ADULTES",
-    description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF).",
+    description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF). Plus d'info sur https://www.facebook.com/people/A%C3%AFkido-Bracieux/61579966506512/",
     image: 'img/event-noel-aikido.jpg'
   },
 
