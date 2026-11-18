@@ -31,6 +31,7 @@ var EVENEMENTS = [
      type: 'Stage de Noël INTERCLUBS',
      titre: "STAGE ENFANTS",
      description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF)."
+     image: 'img/event noel aikido.jpg'
     },
 
   {
@@ -40,6 +41,7 @@ var EVENEMENTS = [
     type: 'Stage de Noël INTERCLUBS',
     titre: "STAGE ADULTES",
     description: "1 ENTRÉE = 1 CADEAU Les cadeaux seront au profit des enfants défavorisés (de 0 à 18 ans). Le cadeau, devra être neuf et répondre à la norme Française (NF)."
+    image: 'img/event noel aikido.jpg'
   },
 
 ];
@@ -126,7 +128,17 @@ var EVENEMENTS = [
 
     if (e.description) body.appendChild(el('p', 'agenda-desc', e.description));
 
-    item.appendChild(body);
+        item.appendChild(body);
+
+    if (e.image) {
+      var img = document.createElement('img');
+      img.className = 'agenda-img';
+      img.src = e.image;
+      img.alt = e.titre || "Illustration de l'événement";
+      img.loading = 'lazy';
+      img.onerror = function () { if (img.parentNode) img.parentNode.removeChild(img); };
+      item.appendChild(img);
+    }
     return item;
   }
 
